@@ -1,0 +1,66 @@
+.floats
+{
+/* Компенсируем отступы между float-блоками, чтобы они занимали все доступное пространство */
+margin: -30px 10px 0 -20px;
+
+/* Эти правила для IE */
+position: relative;
+display: inline-block;
+clear: both;
+}
+.floats:after
+{
+content: '';
+display: block;
+clear: both;
+}
+.floats .left
+{
+position: relative;
+float: left;
+
+/* Убираем удвоение отступов в IE */
+display: inline;
+
+/* Прячем все, что вдруг вылезло за наши ограничения */
+overflow: hidden;
+
+/* Отсупы между float-блоками */
+margin: 3em 0 0 2em;
+
+/* Задаем минимальную ширину по картинке и тексту */
+width: 14em;
+min-width: 200px;
+}
+.floats .left .r
+{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+}
+.floats .left .min
+{
+/* Задаем минимальную высоту по картинке */
+margin: 0 0 140px 0;
+
+/* Задаем минимальную высоту по тексту */
+height: 4em;
+
+/* Дублируем значение минимальной ширины по картинке для IE */
+width: 250px;
+}
+
+
+.catalog_categories{overflow:hidden;margin:0 0 26px; list-style: none; padding-top: 10px; }
+.catalog_categories li{float:left;margin:6px 6px 0 0; min-width:120px;}
+.catalog_categories li{
+    border: 1px solid #BB94C6;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    height: 28px;
+    line-height: 26px;
+    padding: 0 11px;
+}
+.catalog_categories a { text-decoration:none; }
